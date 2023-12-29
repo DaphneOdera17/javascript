@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // + 两边只要有字符串就会把另一边也转换成字符串
+        // 其他运算符号会转换成数字型
+        // + 作为正好解析可以转换成数字型
+        console.log(1 + 1)
+        console.log('birdy' + 1) // 'birdy1'
+        console.log(2 + 2)
+        console.log(2 + '2') // '22'
+        console.log(2 - 2)
+        console.log(2 - '2') // 0
+        console.log(+'123') // 123
+        console.log(typeof '123') // string 型
+        console.log(typeof +'123') // number 型
+        console.log(+'11' + 11) // 11 + 11 = 22 
+
+        // 显式转换
+        let str = '123'
+        console.log(Number(str))
+
+        // parseInt 只取整数
+        // parseFloat 
+        console.log(parseInt('12px')) // 12
+        console.log(parseInt('12.34px')) // 12
+        console.log(parentInt('12.94px')) // 12
+        console.log(parseInt('abc12.94px')) // NaN
+
+        console.log(parseFloat('12px')) // 12
+        console.log(parseFloat('12.34px')) // 12.34
+        console.log(parseFloat('12.94px')) // 12.94
+        console.log(parseFloat('abc12.94px')) // NaN
+
+        // 比较运算符
+        console.log(2 == 2) // true
+        // 比较运算符有隐式转换，会把字符型转换为数值型
+        // == 只判断值是否相等 全等
+        console.log(2 == "2") // true
+        // === 判断类型和值是否都相等
+        console.log(2 === "2") //false
+        // NaN 不等于任何人，包括他自己
+        console.log(NaN === NaN) //false
+    </script>
+</body>
+</html>
